@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart Clone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f1f3f6;
+    }
+
+    header {
+      background: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    
+    }
+
+    .search-bar input {
+      width: 600px;
+      padding: 10px;
+      background-color:rgb(207, 228, 221);
+      border-radius: 10px;
+      box-shadow: 1px 1px;
+    }
+
+    nav {
+      background: white;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 10px 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+
+     a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .banner {
+      background: url('https://via.placeholder.com/1200x200') no-repeat center center;
+      background-size: cover;
+      height: 200px;
+      margin-top: 10px;
+    }
+
+    .section {
+      background: white;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .section h2 {
+      margin-bottom: 10px;
+    }
+
+    .products {
+      display: flex;
+      gap: 35px;
+      overflow-x: auto;
+    justify-content: space-around;
+    }
+
+    .products1{
+        display: flex;
+      gap: 10px;
+    justify-content: space-around;
+      
+    
+    }
+    .product {
+      text-align: center;
+      
+    }
+
+    .product img {
+      width: 100px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .deal {
+      background: #f5faff;
+      padding: 10px;
+      border: 1px solid #cce;
+      border-radius: 5px;
+    }
+
+    
+    @media (max-width: 768px) {
+      .search-bar input {
+        width: 150px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+    }
+
+    
+
+.main-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.category {
+  background-color: white;
+  padding: 10px;
+  flex: 1;
+  border-radius: 5px;
+}
+
+.category h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.product-card1 {
+  text-align: center;
+}
+
+.product-card1 img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.product-card1 p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.product-card1 span {
+  color: green;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+
+.footer {
+  background-color:black;
+  color: #fff;
+  padding: 30px 20px 10px;
+  font-size: 14px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #878787;
+}
+
+.footer-column a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+.footer-column p {
+  margin: 2px 0;
+  font-size: 13px;
+}
+
+.social-icons a {
+  font-size: 18px;
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  padding-top: 10px;
+  text-align: center;
+  color: #ccc;
+  font-size: 13px;
+}
+
+.footer-bottom a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyF5hXBqwGEg0qUrsXboYN_dNLqGiSDSVy0Q&s" height="55px" width="100px">
+
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for Products, Brands and More">
+    </div>
+    <div style="margin-right: 100px;">
+     <img src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png" height="25px"><a    href="#" style="padding: 10px;margin-bottom: 200px; text-decoration: none;"><a style="padding: 10px; margin-bottom: 200px; text-decoration: none;">Login</a>
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTquWYUARFD1cNQv2xYwWtCKhT4wcHywgIuQ&s" height="25px" style="padding: 2px; padding-left: 50px; "><a    href="#" style="padding: 10px; margin-bottom: 200px; text-decoration: none; color:black">Cart</a>
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiB7Bn5xVXfHqYHb06t_yOKw81kDqYVjLBRg&s" height="25px" style="padding: 2px; padding-left: 50px; "><a    href="#" style="padding: 10px; margin-bottom: 200px; text-decoration: none; color:black">Become a Seller</a>
+
+      <strong style="padding: 20px;">...</strong>
+     
+     
+    </div>
+  </header>
+
+  <nav>
+   <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/a22a213ca6221b65.png?q=100"><br><br>
+   
+   <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/5f2ee7f883cdb774.png?q=100"><br><br>
+   
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ4lZS8HNLAlCmTL898UD7GkcO1b7jSwv2hA&s" height="50px" >
+   <img src="https://www.shutterstock.com/image-photo/side-view-young-smiling-happy-260nw-2326622259.jpg" height="50px">
+  <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZ1cm5pdHVyZXxlbnwwfHwwfHx8MA%3D%3D" height="50px">
+
+    <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/e90944802d996756.jpg?q=100">
+  <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/3c647c2e0d937dc5.png?q=100">
+  <img src="https://market99.com/cdn/shop/files/WW10006720-1_66fa69f0-47a8-4442-98f8-6493fd92586f.jpg?v=1749552727" height="50px">
+  <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/aeeada80b1863116.png?q=100 "height="50px">
+  </nav>
+
+  <div class="banner">
+    <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/fb28e3e1d22e6da2.jpg?q=60" alt="" height="200px" width="100%">
+  </div>
+
+  <div class="section" style="width: 32cm;">
+    <h2>499 Only</h2>
+    <div class="products">
+      <div class="product"><img src="https://rukminim2.flixcart.com/image/240/240/xif0q/dress/o/y/a/s-hoc-dress-1050-house-of-common-original-imahdhhkwzq7eqqp.jpeg?q=60"><p>Dresses</p></div>
+      <div class="product"><img src="https://rukminim2.flixcart.com/image/240/240/xif0q/ethnic-set/1/e/q/s-204kbd2167ia-skylee-original-imahd6wrdeytgz3y.jpeg?q=60"><p>Kurta Sets</p></div>
+      <div class="product"><img src="https://rukminim2.flixcart.com/image/240/240/xif0q/slipper-flip-flop/y/g/v/10-health-pulse-1-black-health-pulse-1-grey-evok-grey-original-imahc7zmwjjhxzaf.jpeg?q=60"><p>Slippers</p></div>
+      <div class="product"><img src="https://rukminim2.flixcart.com/image/240/240/xif0q/sandal/j/w/k/6-23s-happy-black-original-imagtsczcxqfggvh.jpeg?q=60"><p>Block Heels</p></div>
+      <div class="product"><img src="https://rukminim2.flixcart.com/fk-p-flap/240/240/image/d86351df4ed906f3.jpg?q=60"><p>Men's Picks</p></div>
+      <div class="product"><img src="https://rukminim2.flixcart.com/image/240/240/xif0q/sari/x/n/m/free-crystal-wine-11-divine-fabrics-unstitched-original-imahcn86hpyvkbw8.jpeg?q=60"><p>Men's Picks</p></div>
+    </div>
+  </div>
+  
+
+  <div class="section">
+    <h2>Best Deals on Smartphones</h2>
+    <div class="products">
+      <div class="product"><img src="https://rukminim2.flixcart.com/image/240/240/xif0q/mobile/x/v/z/-original-imah28xpzzwz4fwg.jpeg?q=60"><p>Realme C61</p></div>
+      <div class="product"><img src="https://rukminim2.flixcart.com/image/240/240/xif0q/mobile/9/b/n/-original-imah3afnqj84usyy.jpeg?q=60"><p>Poco M6 Plus</p></div>
+      <div class="product"><img src="https://rukminim2.flixcart.com/image/240/240/xif0q/mobile/w/w/h/-original-imahc7ezhz9qxm6d.jpeg?q=60"><p>Nothing Phone</p></div>
+      <div class="product"><img src="https://rukminim2.flixcart.com/image/240/240/xif0q/mobile/s/v/h/-original-imahd57g62dfepkh.jpeg?q=60"><p>Vivo T4</p></div>
+      <div class="product"><img src="https://rukminim2.flixcart.com/image/240/240/xif0q/mobile/t/k/h/-original-imah7jsppzwb9qb3.jpeg?q=60"><p>Poco C75</p></div>
+      <div class="product"><img src="https://rukminim2.flixcart.com/image/240/240/xif0q/mobile/j/a/b/-original-imah83eztbdcsknu.jpeg?q=60"><p>Poco C75</p></div>
+        <div class="product"><img src="https://rukminim2.flixcart.com/image/240/240/xif0q/mobile/m/3/k/-original-imahbqxnuhznhsj4.jpeg?q=60"><p>Poco C75</p></div>
+    </div>
+  </div>
+
+ <div class="section">
+   
+    <div class="products1">
+      <div><img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/d89a0cd1fddfeb34.jpg?q=60" height="210px"></div>
+      <div ><img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/9a1762cc3212ebf3.jpg?q=60" height="210px"></div>
+      <div><img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/cc9e48717aea42bf.jpg?q=60" height="210px"></div>
+     </div>
+  </div>
+
+   <div class="section">
+   
+    <div class="products1">
+      <div><img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/fa1b53d0efac4634.jpg?q=60" height="210px"></div>
+      <div ><img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/fa1b53d0efac4634.jpg?q=60" height="210px"></div>
+      <div><img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/fa1b53d0efac4634.jpg?q=60" height="210px"></div>
+     </div>
+  </div>
+
+  <!--1 section -->
+
+  <div class="main-grid">
+
+
+    
+    <section class="category">
+      <h2>Fashion's Top Deals</h2>
+      <div class="product-grid">
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/sandal/l/u/f/6-sandal-6061-6-bersache-black-original-imah5e49jytjgfbe.jpeg?q=60" alt="">
+          <p>Men's Slippers</p>
+          <span>Min.70%Off</span>
+        </div>
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/shopsy-shirt/z/r/w/m-hkv-007s-hkv-fashion-original-imah5xdgyfrae7u2.jpeg?q=60" alt="">
+          <p>Causal Shirts</p>
+          <span>Big Savings</span>
+        </div>
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/t-shirt/e/d/c/xxl-mens-strip-polo-hs-black-red-tb-blue-original-imahfdzkrtqyqtzx.jpeg?q=60" alt="">
+          <p>Men's T-Shirts</p>
+          <span>In Focus Now</span>
+        </div>
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/sari/f/q/b/free-9-patti-prisha-unstitched-original-imahcza5f9xveuwt.jpeg?q=60" alt="">
+          <p>Women's Sarees</p>
+          <span>Don't Miss</span>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="category">
+      <h2>Season's Top Picks</h2>
+      <div class="product-grid">
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/cycle/n/k/c/14t-rocky-baby-pink-14-13-nexova-60-single-speed-original-imahc2xqvyrfe5yp.jpeg?q=60" alt="">
+          <p>Cycle</p>
+          <span>Min. 50% Off</span>
+        </div>
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/kn3i1zk0/microphone-accessory/v/o/e/ws-858-wireless-with-speaker-bluetooth-speaker-ws-858-wireless-original-imagfum6hguevusf.jpeg?q=60" alt="">
+          <p>MicroPhone</p>
+          <span>Min. 50% Off</span>
+        </div>
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/kn3i1zk0/microphone-accessory/v/o/e/ws-858-wireless-with-speaker-bluetooth-speaker-ws-858-wireless-original-imagfum6hguevusf.jpeg?q=60" alt="">
+          <p>Dry Fruit,Nut & Seed</p>
+          <span>Min. 50% off</span>
+        </div>
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/l09w8sw0/helmet/s/9/v/nano-1-na-58-half-face-active-original-imagc3gq2pxfgv3t.jpeg?q=60" alt="">
+          <p>Bike Helmets</p>
+          <span>Min. 50% off</span>
+        </div>
+      </div>
+    </section>
+     <section class="category">
+      
+        <div>
+            <img src="https://rukminim2.flixcart.com/www/1060/1460/promos/26/09/2023/6c3c5fe2-c236-4fa2-8d97-595e1e01da01.jpg?q=60" height="550px" width="450px">
+        </div>
+      
+    </section>
+
+
+   
+ </div>
+ 
+ 
+  <div>
+
+    <img src="https://rukminim2.flixcart.com/fk-p-flap/3200/700/image/3e9c2888c0352435.jpg?q=60" alt=""  height="500px" width="100%">
+ </div>
+ 
+
+
+ <div class="section">
+   
+    <div class="products1">
+      <div><img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/d89a0cd1fddfeb34.jpg?q=60" height="210px"></div>
+      <div ><img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/9a1762cc3212ebf3.jpg?q=60" height="210px"></div>
+      <div><img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/cc9e48717aea42bf.jpg?q=60" height="210px"></div>
+     </div>
+  </div>
+
+   <div class="section">
+   
+    <div class="products1">
+      <div><img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/fa1b53d0efac4634.jpg?q=60" height="210px"></div>
+      <div ><img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/fa1b53d0efac4634.jpg?q=60" height="210px"></div>
+      <div><img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/fa1b53d0efac4634.jpg?q=60" height="210px"></div>
+     </div>
+  </div>
+
+
+ 
+ <div class="main-grid">
+
+
+    
+    <section class="category">
+      <h2>Make your home stylish</h2>
+      <div class="product-grid">
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/wall-clock/e/t/b/sk-multi-store-world-analog-22-cm-x-22-cm-wall-clock-hanuman-ji-original-imah2ggqz5zhhtwy.jpeg?q=60" alt="">
+          <p>Wall Clocks</p>
+          <span>Min. 50%off</span>
+        </div>
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/torch/7/h/l/10-1-led-flashlight-with-magnets-hammer-with-4-in-1-option-sebon-original-imahczfsajzzrhzg.jpeg?q=60" alt="">
+          <p>Torches</p>
+          <span>Min. 50% Off</span>
+        </div>
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/plant-sapling/g/t/n/yes-annual-yes-planting-medium-1-grow-bag-bala-plant-creation-original-imahy9g6gweaxgnq.jpeg?q=60" alt="">
+          <p>Plants Saplings</p>
+          <span>Min. 50% Off</span>
+        </div>
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/bulb/i/d/e/2-12w-inverter-bulb-with-b22-based-high-battery-backup-pack-of-2-original-imahcxafvhm5zb28.jpeg?q=60" alt="">
+          <p>Bulbs</p>
+          <span>Min. 50% Off</span>
+        </div>
+      </div>
+    </section>
+
+   
+
+
+
+    <section class="category">
+      <h2>Trending Gadgets & Appliances</h2>
+      <div class="product-grid">
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/trimmer/p/m/u/0-25-4-mm-professional-golden-t99-trimmer-haircut-grooming-kit-original-imahaaeu53bzwxgc.jpeg?q=60" alt="">
+          <p>Trimmers</p>
+          <span>Min. 50% Off</span>
+        </div>
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/trimmer/p/m/u/0-25-4-mm-professional-golden-t99-trimmer-haircut-grooming-kit-original-imahaaeu53bzwxgc.jpeg?q=60" alt="">
+          <p>Hair Dryers</p>
+          <span>Min. 50% Off</span>
+        </div>
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/trimmer/p/m/u/0-25-4-mm-professional-golden-t99-trimmer-haircut-grooming-kit-original-imahaaeu53bzwxgc.jpeg?q=60" alt="">
+          <p>Shavers</p>
+          <span>Special offer</span>
+        </div>
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/trimmer/p/m/u/0-25-4-mm-professional-golden-t99-trimmer-haircut-grooming-kit-original-imahaaeu53bzwxgc.jpeg?q=60" alt="">
+          <p>Camera Accessories</p>
+          <span>Special offer</span>
+        </div>
+      </div>
+    </section>
+     <section class="category">
+      <h2>Monsoon Essentials</h2>
+      <div class="product-grid">
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/shopsy-deodorant/r/j/h/450-cool-charm-and-mischief-avatar-1-deodorant-spray-set-wet-men-original-imah7rhyfmtzavn9.jpeg?q=60" alt="">
+          <p>Fragrances</p>
+          <span>Special Offer</span>
+        </div>
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/shopsy-deodorant/r/j/h/450-cool-charm-and-mischief-avatar-1-deodorant-spray-set-wet-men-original-imah7rhyfmtzavn9.jpeg?q=60" alt="">
+          <p>LipStick</p>
+          <span>Special offer</span>
+        </div>
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/desk-organizer/b/k/u/6-layer-foldable-multipurposehumble-kart-plastic-rectangular-original-imahcd3gkyhpdhbf.jpeg?q=60" alt="">
+          <p>Desk Organizers</p>
+          <span>Special offer</span>
+        </div>
+        <div class="product-card1">
+          <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/bath-tub/j/o/z/portable-inflatable-3-ft-3-ring-bath-tub-child-tub-cushion-original-imahf6y9nwzbgb8h.jpeg?q=60" alt="">
+          <p>Baby Bath Tub</p>
+          <span>Min. 50% off</span>
+        </div>
+      </div>
+    </section>
+ </div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-column">
+      <h4>ABOUT</h4>
+      <a href="#">Contact Us</a>
+      <a href="#">About Us</a>
+      <a href="#">Careers</a>
+      <a href="#">Flipkart Stories</a>
+      <a href="#">Press</a>
+      <a href="#">Corporate Information</a>
+    </div>
+    <div class="footer-column">
+      <h4>GROUP COMPANIES</h4>
+      <a href="#">Myntra</a>
+      <a href="#">Cleartrip</a>
+      <a href="#">Shopsy</a>
+    </div>
+    <div class="footer-column">
+      <h4>HELP</h4>
+      <a href="#">Payments</a>
+      <a href="#">Shipping</a>
+      <a href="#">Cancellation & Returns</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div class="footer-column">
+      <h4>CONSUMER POLICY</h4>
+      <a href="#">Return Policy</a>
+      <a href="#">Terms Of Use</a>
+      <a href="#">Security</a>
+      <a href="#">Privacy</a>
+      <a href="#">Sitemap</a>
+      <a href="#">Grievance Redressal</a>
+      <a href="#">EPR Compliance</a>
+    </div>
+    <div class="footer-column address">
+      <h4>Mail Us:</h4>
+      <p>Flipkart Internet Private Limited,</p>
+      <p>Buildings Alyssa, Begonia &</p>
+      <p>Clove Embassy Tech Village,</p>
+      <p>Outer Ring Road, Devarabeesanahalli Village,</p>
+      <p>Bengaluru, 560103, Karnataka, India</p>
+      <h4>Social:</h4>
+      <div class="social-icons">
+        <img src="facebook.png" height="50px">
+        <img src="youtube.png" height="50px">
+         <img src="inst.png" height="50px">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom" style="display: flex; justify-content: space-around;" >
+    <a href="#" >Become a Seller</a>
+    <a href="#">Advertise</a>
+    <a href="#">Gift Cards</a>
+    <a href="#">Help Center</a>
+    <span>© 2007-2025 Flipkart.com</span>
+  </div>
+</footer>
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
