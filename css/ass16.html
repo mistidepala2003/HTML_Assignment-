@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main {
+
+            display: grid;
+            grid-template-columns: 350px 350px 350px 350px;
+            grid-template-rows: 300px 300px;
+            gap: 5px;
+            padding:35px;
+        }
+
+        .main>div {
+
+            border: 2px solid;
+        }
+        .child1{
+            background-image: url("https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?cs=srgb&dl=pexels-pixabay-56866.jpg&fm=jpg");
+            background-position: center;
+            background-size:cover ;
+             /* transition: width 5s linear 0.1s; */
+            /* transition: transform 0.3s ease, box-shadow 0.3s ease ;
+            transform: scale(1);
+            box-shadow: none; */
+        }
+        .child1:hover{
+            transform: scale(1.03);
+            box-shadow: 5px 5px 5px red;
+        }
+        .child2{
+
+             background-image: url("https://m.media-amazon.com/images/I/51PvAAOoKML._UF1000,1000_QL80_.jpg");
+            background-position: center;
+            background-size:cover ;
+        }
+        .child2:hover{
+            transform: scale(1.03);
+            box-shadow: 5px 5px 5px black;
+        }
+        .child3{
+
+             background-image: url("https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt134818d279038650/6668df6434f6fb5cd48aac34/beautiful-flowers-rose.jpeg?q=70&width=3840&auto=webp");
+            background-position: center;
+            background-size:cover ;
+        }
+         .child3:hover{
+            transform: scale(1.03);
+            box-shadow: 5px 5px 5px red;
+        }
+        .child4{
+
+             background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoecEpTo29bKSCSrbTxAlGUWP_khdmlkEjzw&s");
+            background-position: center;
+            background-size:cover ;
+        }
+         .child4:hover{
+        
+            transform: scale(1.03);
+            box-shadow: 5px 5px 5px yellow;
+        }
+        .child5{
+
+             background-image: url("https://plus.unsplash.com/premium_photo-1676070096487-32dd955e09e0?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29sb3VyZnVsJTIwZmxvd2VyfGVufDB8fDB8fHww");
+            background-position: center;
+            background-size:cover ;
+        }
+         .child5:hover{
+        
+            transform: scale(1.03);
+            box-shadow: 5px 5px 5px orange;
+        }
+        .child6{
+
+             background-image: url("https://t3.ftcdn.net/jpg/06/16/34/92/360_F_616349295_hw3oZYyNeRrz2s1h2n6x5fBLwHUA4Gpw.jpg");
+            background-position: center;
+            background-size:cover ;
+        }
+         .child6:hover{
+            transform: scale(1.03);
+            box-shadow: 5px 5px 5px purple;
+        }
+        .child7{
+
+             background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdCsMBOAM9hWmfSpH3atS75RcKdnIozOahVQ&s");
+            background-position: center;
+            background-size:cover ;
+        }
+         .child7:hover{
+            transform: scale(1.03);
+            box-shadow: 5px 5px 5px palevioletred;
+        }
+        .child8{
+
+             background-image: url("https://static.vecteezy.com/system/resources/thumbnails/039/350/367/small_2x/ai-generated-violet-single-purple-flower-ai-generated-photo.jpg");
+            background-position: center;
+            background-size:cover ;
+        }
+         .child8:hover{
+            transform: scale(1.03);
+            box-shadow: 5px 5px 5px palegreen;
+        }
+        .child9{
+
+             background-image: url("https://www.thespruce.com/thmb/0H60G9gipmeXfXlqijtr8k7Y958=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/thespruce-prettiestflowers-plumeria-57dc49b8d9ab4f8a9fbc1e517e7401ae.jpg");
+            background-position: center;
+            background-size:cover ;
+        }
+         .child2:hover{
+            transform: scale(1.03);
+            box-shadow: 5px 5px 5px gray;
+        }
+       
+        h1{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Image Gallery</h1>
+    <div class="main">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+        <div class="child4"></div>
+        <div class="child5"></div>
+        <div class="child6"></div>
+        <div class="child7"></div>
+        <div class="child8"></div>
+       
+    </div>
+</body>
+
+</html>

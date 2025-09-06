@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            height: 550px;
+            width: 100%;
+            background-image: url("https://t3.ftcdn.net/jpg/06/16/34/92/360_F_616349295_hw3oZYyNeRrz2s1h2n6x5fBLwHUA4Gpw.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+       .a{
+            text-decoration: none;
+        }
+         .a:hover{
+           color: black;
+           background-color: azure;
+        }
+
+        .b{
+            text-decoration: none;
+        }
+
+        .b:hover{
+            color: blue;
+            background-color: brown;
+        }
+
+        .b:visited{
+            color: gray;
+        }
+
+        .c:link{
+            color: blue;
+            background-color: blanchedalmond;
+        }
+         .c:visited{
+           
+           color: orange;
+        }
+        .c:active{
+            background-color: wheat;
+            border: 5px solid salmon;
+        }
+       
+        p::first-line{
+            font-size: xx-large;
+            color: red;
+            background-color: cadetblue;
+        }
+
+        ::selection{
+            color: chartreuse;
+            background-color: cornflowerblue;
+        }
+
+       h2{
+            text-align: center;
+            font-size: xx-large;
+            color: chocolate;
+            border: 2px solid salmon;
+       }
+    
+        h2::after{
+            color: red;
+           content: '*';
+       }
+        h2::before{
+            
+            color: red;
+           content: '*';
+       }
+    
+         
+         
+
+    </style>
+</head>
+<body>
+
+    <div class="parent"></div>
+    <h2>This is Flower picture</h2>
+    <p>Learn more about image sources
+Image details come from several sources:
+Digital Source, credit, creator, and copyright info: Come from an image file, through a standard called the International Press Telecommunications Council (IPTC). For more details on Digital Source field,refer to The Newscode Schema from IPTC. Learn about image rights metadata in Google Images.
+Get this image on and license details: Come from either structured metadata or theInternational Press Telecommunications Council (IPTC). Learn about image license in Google Images.
+How the image was made or edited
+Some images may contain data that shows if they were generated with AI or captured with a camera. This info can come from either:
+C2PA: A technical standard that traces the origin of content. 
+SynthID: A digital watermark embedded on some AI-generated images.
+Tip: You can find this info in Learn more about an image when it exists.
+Learn how to report license or copyright info that you believe is incorrect.</p>
+
+<a href="#learn" class="a">Learn more</a>
+<a href="#learn" class="b">Learn more</a>
+<a href="#learn" class="c">Learn more</a>
+
+</body>
+</html>

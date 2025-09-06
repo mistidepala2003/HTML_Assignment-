@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main {
+
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 300px 300px ;
+            gap: 5px;
+            /* padding-left:200px; */
+            padding-top: 20px;
+        }
+
+        .main>div {
+
+            border: 2px solid;
+        }
+        .child1{
+            background-image: url("https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?cs=srgb&dl=pexels-pixabay-56866.jpg&fm=jpg");
+            background-position: center;
+            background-size:cover ;
+        }
+        .child2{
+
+             background-image: url("https://m.media-amazon.com/images/I/51PvAAOoKML._UF1000,1000_QL80_.jpg");
+            background-position: center;
+            background-size:cover ;
+        }
+        .child3{
+
+             background-image: url("https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt134818d279038650/6668df6434f6fb5cd48aac34/beautiful-flowers-rose.jpeg?q=70&width=3840&auto=webp");
+            background-position: center;
+            background-size:cover ;
+        }
+        .child4{
+
+             background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoecEpTo29bKSCSrbTxAlGUWP_khdmlkEjzw&s");
+            background-position: center;
+            background-size:cover ;
+        }
+        .child5{
+
+             background-image: url("https://plus.unsplash.com/premium_photo-1676070096487-32dd955e09e0?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29sb3VyZnVsJTIwZmxvd2VyfGVufDB8fDB8fHww");
+            background-position: center;
+            background-size:cover ;
+        }
+        .child6{
+
+             background-image: url("https://t3.ftcdn.net/jpg/06/16/34/92/360_F_616349295_hw3oZYyNeRrz2s1h2n6x5fBLwHUA4Gpw.jpg");
+            background-position: center;
+            background-size:cover ;
+        }
+       
+        h1{
+            text-align: center;
+        }
+         @media only screen and (max-width:600px) {
+            .main{
+                display:grid;
+                grid-template-columns: auto auto ;
+            }
+
+        }
+         @media only screen and (max-width:567px) {
+            .main{
+                display:grid;
+                grid-template-columns: auto ;
+                 grid-template-rows: 300px 300px  300px 300px 300px;
+
+            }
+            
+        }
+         
+        
+    </style>
+</head>
+
+<body>
+    <h1>Image Gallery</h1>
+    <div class="main">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+        <div class="child4"></div>
+        <div class="child5"></div>
+        <div class="child6"></div>
+       
+    </div>
+</body>
+
+</html>

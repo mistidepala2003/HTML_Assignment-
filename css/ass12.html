@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        :root{
+            --primary-color:gray;
+            --secondary-color:white;
+            --text-style:italic;
+            
+        }
+        a {
+            text-decoration: none;
+        }
+
+        .parent {
+
+            height: 400px;
+            width: 80%;
+
+            padding: 30px;
+            padding-right: 50px;
+            margin-left: 65px;
+            background-color: antiquewhite;
+            border: 10px solid var(--primary-color);
+            display: flex;
+            gap: 3px;
+            justify-content: space-evenly;
+
+
+
+
+
+        }
+
+        .child {
+
+            height: 400px;
+            width: 250px;
+
+            background-color: whitesmoke;
+        }
+
+        .i1 {
+            height: 200px;
+            width: 250px
+        }
+
+        .main-footer {
+            padding-left: 30px;
+            width:auto;
+           
+            display: flex;
+            justify-items: center;
+            background-color: var(--primary-color);
+
+        }
+
+        .footer1 {
+            height: 200px;
+            width: 400px;
+            
+            margin: 20px;
+            padding: 20px;
+            font-size: medium;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header style="   background-color: var(--secondary-color);overflow: hidden;">
+        <img src="watch.png" height="70px" width="70px" style="float: left;">
+
+        <a href="Home" style="text-align: center; float: left; padding: 20px;">Home</a>
+
+        <a href="About Us" style="text-align: center; float: left; margin: 0px; padding: 20px; ">About Us</a>
+
+        <a href="Contact" style="text-align: center; float: left; margin: 0px; padding: 20px; ">Contact</a>
+
+
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAaVBMVEX///8AAAC3t7fq6urk5OSbm5s2NjYZGRleXl5MTEz5+fn8/Pyvr6/z8/PCwsLU1NRsbGzJyckvLy+IiIhFRUWoqKjc3NxlZWVZWVlzc3ORkZGCgoKioqJ7e3tAQEBUVFQNDQ0gICAnJydo2HxQAAAD+0lEQVR4nO2b65KiQAyFiSAIggIiKuMFef+HnITL6uDuSHWfLqza/n7TbYB0chKi41gsFovFYrFYLBaLxTI7Xhr+oKiiuU1ynBWNiec2yXHCF6O+5jbJccpb7j9RE92SuW0as+NH5c5txJgNG7Wd24gxLhu1nNuIMVFAdJzbiBdSIn89txFjzkT3cm4jxoinL+Y2YkzZEKULc2QqvrEuXkI8lp3KozoZNspXMeps2KhUxaiSF+4T1wgZKYqQhMwJhZgUk1h0IwrR1vSwv+Zq6X6nvPId0ZHooCZs+RnXGdicjjInqtSWZpyT91hrhp1JeefEJ7pgremRaKOaV1m2F0ZKGlYgpLpWJLERnc773lTXilAw4ekSARX9vJPEyot/QetmEz65K6Q1PRXHGmX9uL4QXfFOtT5o1ZR8dBt8neXyqT6pLzcjibdcfZ/Vl3t3E8XfQvNQX7n4g9dZX5rhj0NvDY/pfKeNzvq9RpL6J6SZUreqsvUXSt093QAvFPaqUnggWnGcA3s6R2Tf09php73DmERdCg/EcKEg7QCl4viBRF+sJM70s0TUoD1dpLCuQ3CkyyHGDKw0pPBAhZbEBGhbZmBPhzR4PdI+LD8QibDR3SQpOKwgrOmpIK1UDsAFrqOwZt1x1PfRJVGAk8RuoSWFBwDB7gmRHRpSeMCtkcXfQlci9PjsVIBtOthDCaE6UtA+LXyHAWKfGCiJ16g+6la9w/XXvSCnxs1xQmEJ8nMn4tL/CKqzuOS7YoQsThInN1jOwkliL4Bl9xLm6RlCIvSoft15QfwcldwLgIJtuaE2coCS+A7UZihX8DASod+sxhwaiBQekPCC8HR2gwaVRd095/b7caVNjps0WgbAD8cAKcxEKdAkVBDetXv5IE6QxC4CqN5/2CBOBXvkOERLhR8wWvmDJETlYiDyrf7z5s0unzralX+cVVex6rIEAWq/eQ00ooNEgoyA4IC1SuJDHoAIce23yPVAfNyI9P+Fl22y6W5R8tXGE6d3yWuq8900z9iu7jUF16VZ3ZMN5zqf0s3ZD1ffTM7ay1e2nglNmPgRm0KDz0oSThhvpLR530SLxJp0sZHuAa4AfUGEcTs44Yp1716JfNVrm5tbTlOhsfD06AxOGQs58TvuDJfKA/sV+gnpDHY/I4NibwYLREb3ijUjg//g4DtuujuWPsWbFm/bJ+1eGrLj/YK8tO7r4WnCz+wGmSLDvo2xoNCep7j/veu7QC3H4s6Ol0iBfTEXE7r59E5dvddqB7msbhViYFBOP3UVJjSrXP/P1Wb//Vbdu4c16VfW/T0UZmaiH5TnNDzFU6POtjqEp8XH/cvMYrFYLBaLxWKxWCyWJ74BqngvrtATxToAAAAASUVORK5CYII="
+            height="37px" width="37px" style=" text-align: center;  float: right; ">
+        <a href="cart" style=" text-align: center;  float: right; margin: 0px; padding: 10px;">Cart</a>
+
+        <img src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"
+            height="45px" width="45px" style=" text-align: center;  float: right; padding: 10px; overflow: hidden;">
+        <a href="Login" style=" text-align: center;  float: right; margin: 0px; padding: 10px;">Login</a>
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0NiUpkz_ZrY2blG7w9KYMNPTbGvzPBPB9218WjBaqDXcU-ra7Wes8KFNmRkNZAKFAucc&usqp=CAU"
+            height="30px" width="30px" style=" text-align: center;  float: right; margin: 0px; padding: 10px;">
+        <a href="Wishlist" style="padding: 10px; float: right;">Wishlist</a>
+
+    </header><br><br><br>
+    <h1 style="text-align: center;">Watch Cart</h1>
+
+    <div class="parent">
+        <div class="child">
+            <img class="i1" src="w1.jpg">
+            <br>
+            <strong style="color: rgb(215, 192, 192); font-style: var(--text-style);">JAINX</strong><br><br>
+            <small style="font-size: 15px;">Blue Silicone Band Analog Watch - For Women JW8553</small><br><br>
+
+            <span style="color: green; font-family: ;">Special price</span><br><br>
+
+            <b>&#8377;297</b> <s>&#8377;1799</s> <b style="color: green;">83% off <br><br>
+                Bank Offer
+            </b>
+
+        </div>
+        <div class="child">
+            <img class="i1" src="w2.jpg">
+
+            <br>
+            <strong style="color: rgb(215, 192, 192);">DIGITRACK </strong><br><br>
+            <small style="font-size: 15px;">DG6121SL02 Leather Strap Black Dial Casual Analog Watch - For Women
+                DG6121SL02 BLACK DIAL</small><br><br>
+
+            <span style="color: green;">Special price</span><br><br>
+
+            <b>&#8377;₹231</b> <s>&#8377;₹699</s> <b style="color: green;">66% off
+                <br>
+                Bank Offer
+            </b>
+
+
+
+
+        </div>
+        <div class="child">
+            <img class="i1" src="w3.jpg">
+
+
+            <br>
+            <strong style="color: rgb(215, 192, 192);">Dhyanesh Enterprise </strong><br><br>
+            <small style="font-size: 15px;">Gift Special Roe Gold & Flower Partyedding Analog Watch For Girls Analog
+                Watch - For Women </small><br><br>
+
+            <span style="color: green;">Special price</span><br><br>
+
+            <b>&#8377;₹219</b> <s>&#8377;₹699</s> <b style="color: green;">68% off <br>
+                Bank Offer
+            </b>
+
+        </div>
+        <div class="child">
+            <img class="i1" src="w4.jpg">
+
+
+            <br>
+            <strong style="color: rgb(215, 192, 192);">Loretta </strong><br>
+            <small style="font-size: 15px;">Analog Watch - For Women Fresh Fashion Best In Market Black Girls Watch
+            </small><br><br>
+
+            <span style="color: green;">Special price</span><br><br>
+
+            <b>&#8377;₹226</b> <s>&#8377;₹1,299</s> <b style="color: green;">82% off <br><br>
+                Bank Offer
+            </b>
+
+        </div>
+    </div>
+    <br><br>
+    <footer class="main-footer">
+
+        <div class="footer1" style="padding: 20px; padding-top: 200px;">
+            <a href="home" style="padding: 5px;">Home</a><br><br>
+            <a href="Contact Us" style="padding: 5px;">Contact Us</a><br><br>
+            <a href="about" style="padding: 5px;">About</a><br><br>
+
+        </div>
+        <div class="footer1" style="padding: 20px; padding-top: 200px;">
+            <img src="facebook.png" alt="" height="30px" width="30px">
+            <img src="inst.png" alt="" height="30px" width="30px">
+            <img src="youtube.png" alt="" height="30px" width="30px">
+        </div>
+        <div class="footer1" style="padding: 20px; padding-top: 200px;">
+            <b>Address:</b>
+            <pre> Ujala Avenue, Opp. Vishala Hotel, Near Vishala Circle, <br> Juhapura, Ahmedabad, Gujarat 380055, India.</pre>
+            <b>Email:</b>
+            <pre>Tops@gmail.com</pre>
+
+
+        </div>
+
+    </footer>
+
+
+
+
+</body>
+
+</html>
